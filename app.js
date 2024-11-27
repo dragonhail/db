@@ -2,8 +2,12 @@ const express = require('express');
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
+
 const app = express();
 const PORT = process.env.PORT || 3306;
+
+const cors = require('cors');
+app.use(cors());
 
 // MySQL 데이터베이스 연결 정보
 const dbConfig = {
