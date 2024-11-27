@@ -56,7 +56,7 @@ jobs:
                 docker push $ECR_REGISTRY/djangoecs:$IMAGE_TAG
                 echo "image=$ECR_REGISTRY/djangoecs:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-            #푸시된 이미지를 가지고 ECS 서비스 재시작
+            #푸시된 이미지를 가지고 ECS 서비스 재시작 
             - name: Fill in the new Image in the ECS task Definition
               id: task-def
               uses: aws-actions/amazon-ecs-render-task-definition@c804dfbdd57f713b6c079302a4c01db7017a36fc
