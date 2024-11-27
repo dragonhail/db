@@ -9,7 +9,7 @@ const PORT = process.env.PORT;
 const cors = require('cors');
 app.use(cors());
 
-// MySQL 데이터베이스 연결 정보
+/// MySQL 데이터베이스 연결 정보
 const dbConfig = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
