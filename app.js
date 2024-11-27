@@ -36,7 +36,8 @@ app.get('/', async (req, res) => {
 
 // 헬스체크
 app.get('/health', (req, res) => {
-    res.status(200);
+    // 헬스체크 상태 반환
+    res.status(200).json({ status: 'healthy' });
 });
 
 
