@@ -14,9 +14,9 @@ env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: djangoecs
   ECS_TASK_DEFINITION: ./task-definition.json
-  CONTAINER_NAME: djangoecs
-  ECS_SERVICE: djangoecs
-  ECS_CLUSTER: djangoecscluster
+  CONTAINER_NAME: node-server
+  ECS_SERVICE: cloudcicd
+  ECS_CLUSTER: cloudcicd
 
 jobs:
     build:

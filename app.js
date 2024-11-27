@@ -17,7 +17,7 @@ const dbConfig = {
     database: process.env.DB_NAME,
 };
 
-// MySQL에서 데이터를 조회하는 API
+/// MySQL에서 데이터를 조회하는 API
 app.get('/', async (req, res) => {
     try {
         // MySQL 연결
@@ -33,6 +33,12 @@ app.get('/', async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch data from database' });
     }
 });
+
+// 헬스체크
+app.get('/health', (req, res) => {
+    res.status(200);
+});
+
 
 // 서버 실행
 app.listen(PORT, () => {

@@ -1,12 +1,12 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:905418305225:task-definition/djangoecs:3",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:905418305225:task-definition/cloudcicd:2",
     "containerDefinitions": [
         {
-            "name": "djangoecs",
+            "name": "node-server",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "djangoecs-80-tcp",
+                    "name": "node-server-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -22,10 +22,10 @@
             "systemControls": []
         }
     ],
-    "family": "djangoecs",
+    "family": "cloudcicd",
     "executionRoleArn": "arn:aws:iam::905418305225:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 3,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -44,13 +44,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "512",
-    "memory": "3072",
+    "cpu": "2048",
+    "memory": "4096",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-11-27T00:19:59.345Z",
+    "registeredAt": "2024-11-27T14:01:38.570Z",
     "registeredBy": "arn:aws:iam::905418305225:root",
     "tags": []
 }
