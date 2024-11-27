@@ -18,7 +18,7 @@ const dbConfig = {
 };
 
 // MySQL에서 데이터를 조회하는 API
-app.get('/users', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         // MySQL 연결
         const connection = await mysql.createConnection(dbConfig);
