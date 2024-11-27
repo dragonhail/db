@@ -1,0 +1,56 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:905418305225:task-definition/djangoecs:3",
+    "containerDefinitions": [
+        {
+            "name": "djangoecs",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "djangoecs-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "systemControls": []
+        }
+    ],
+    "family": "djangoecs",
+    "executionRoleArn": "arn:aws:iam::905418305225:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 3,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-11-27T00:19:59.345Z",
+    "registeredBy": "arn:aws:iam::905418305225:root",
+    "tags": []
+}
