@@ -25,7 +25,13 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
-            
+            - name: Load environment variables from GitHub Secrets
+              run: |
+                echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
+                echo "DB_USER=${{ secrets.DB_USER }}" >> .env
+                echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+                echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
+                echo "PORT=${{ secrets.PORT }}" >> .env            
             - name: Nodejs Setup
               uses: actions/setup-node@v3
               with:
@@ -44,7 +50,7 @@ jobs:
             - name: ECR에 로그인
               id: login-ecr
               uses: aws-action/amazon-ecr-login@62f4f872db3836360b72999f4b87f1ff13310f3a
-            
+
             # 이미지를 빌드하고 ECR에 푸시
             - name: build and push image to Amazon ECR
               id: build-image
